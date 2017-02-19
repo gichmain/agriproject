@@ -1,0 +1,8 @@
+{% extends "base.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<p class="text-primary text-center"> This form allows you to send short messages to farmers or extension officers. the target field is either farmer or officer</p>
+
+{{ wtf.quick_form(form) }}
+{%endblock%}

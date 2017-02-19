@@ -1,0 +1,8 @@
+{% extends "base.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<p class="text-primary text-center"> This page helps you in diagnosis. Once you have identified the disease, please serch for cure/management options using the form below. Please ensure your spelling is correct for accurate results</p>
+
+{{ wtf.quick_form(form) }}
+{%endblock%}

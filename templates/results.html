@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> {{disease.disease_name}}</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2> Symptoms</h2>
+  </div>
+  <div class="panel-body">
+    <ol>
+    {% if disease %}
+      {% for symptom in disease.symptoms() %}
+        <li> {{ symptom }}
+      {% endfor %}
+    {% endif %}
+  </ol>
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2> Cure/Control</h2>
+  </div>
+  <div class="panel-body">
+    <ol>
+    {% if disease %}
+      {% for cure in disease.cure() %}
+        <li> {{ cure }}
+      {% endfor %}
+    {% endif %}
+  </ol>
+</div>
+</div>
+
+{% endblock %}

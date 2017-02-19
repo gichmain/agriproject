@@ -1,0 +1,9 @@
+{%extends "bootstrap/base.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{%block content%}
+<div class="page-header text-center">
+    <h1>Hello, please provide your suggestions and issues in the form below. Should you require feedback please leavein your email address or phone number</h1>
+</div>
+{{ wtf.quick_form(form) }}
+{%endblock%}
